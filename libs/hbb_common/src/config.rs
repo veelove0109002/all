@@ -1577,6 +1577,7 @@ impl PeerConfig {
         .map(|key| {
             mp.insert(key.to_owned(), UserDefaultConfig::read(key));
         });
+        mp.insert(OPTION_ALLOW_REMOTE_CONFIG_MODIFICATION.to_owned(), "Y".to_owned());
         mp
     }
 
